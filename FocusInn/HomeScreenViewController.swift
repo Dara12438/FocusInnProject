@@ -12,6 +12,7 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class HomeScreenViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet weak var username: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     var imagePicker: UIImagePickerController?
     
@@ -98,6 +99,10 @@ class HomeScreenViewController: UIViewController, UIImagePickerControllerDelegat
         imageView.layer.borderColor = UIColor.black.cgColor
         imageView.layer.cornerRadius = imageView.frame.height/2
         imageView.clipsToBounds = true
+        
+        if let user = Auth.auth().currentUser {
+            username.text = user.displayName ?? ""
+        }
         // Do any additional setup after loading the view.
     }
     

@@ -28,9 +28,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             else {
                 print(error.debugDescription)
             }
-        }
-        
-        Auth.auth().createUser(withEmail: email, password: password){ user, error in
+            
             if let _ = user {
                 print("user created")
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
@@ -43,7 +41,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 print(error.debugDescription)
             }
         }
-        
     }
     
     override func viewDidLoad() {

@@ -28,6 +28,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
