@@ -6,7 +6,6 @@ target 'FocusInn' do
   use_frameworks!
 
   # Pods for FocusInn
-
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
     pod 'Firebase/Database'
